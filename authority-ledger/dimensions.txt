@@ -1,4 +1,0 @@
-memory
-planning
-shell
-process
