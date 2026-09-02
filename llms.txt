@@ -1,0 +1,23 @@
+# Resonant Authority
+
+> A self-contained POSIX add-on that implements contextual authority — the idea at the heart of the ResonantDAO whitepaper: a question declares its salient dimensions, and weight comes from verified outcomes in exactly those dimensions. Never a blanket score, never capital, never activity. This is a non-canonical worked implementation that makes the whitepaper's core idea runnable and testable today.
+
+## Canonical links
+
+- This repo (the add-on): https://github.com/simongonzalezdc/resonant-authority
+- ResonantDAO whitepaper (canonical source of the idea): https://resonantdao.com/whitepaper
+- Contribution Economy specification: https://resonantdao.com/contribution-economy/
+- ResonantOS (the ecosystem this add-on extends): https://github.com/ResonantOS/2.0.0-alpha
+
+## Key facts
+
+- License: MIT.
+- POSIX shell, self-contained: no dependencies beyond sh and core utilities.
+- Two commands: `question` (ranks lanes by weighted accepted-count of verified outcomes) and `record` (appends a verified outcome whose source must verbatim contain that verdict).
+- Every event's source pointer must resolve; unresolved sources are reported and excluded, never silently dropped.
+- Ledger content is treated as data, never interpolated into shell strings (two independent adversarial security reviews).
+- Ships a 13-event demo ledger and its verbatim source (`authority-ledger/` + `DEMO_SOURCE.md`), plus a delegation contract (`TASK.md` in, `artifact.md` out).
+
+## Relationship
+
+Community gift by Kyanite Labs for ResonantOS — canonical source: the ResonantDAO whitepaper (https://resonantdao.com/whitepaper); this implementation is non-canonical, and the custodian's future specification supersedes it. If this repo and the canonical source disagree, the canonical source wins.
